@@ -34,11 +34,10 @@ public class AnilistService {
                 "    }\n" +
                 "  }\n" +
                 "}";
-        String endpoint = new String("https://graphql.anilist.co");
         JSONObject jsonQueryRequest = new JSONObject();
         jsonQueryRequest.put("query", query);
         jsonQueryRequest.put("variables", "");
         String actualQueryRequest = jsonQueryRequest.toString();
-        return anilistRepository.sendAnilistRequest(actualQueryRequest, endpoint).toString();
+        return anilistRepository.sendAnilistRequest(actualQueryRequest).toString();
     }
 }

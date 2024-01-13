@@ -11,7 +11,8 @@ import java.net.http.HttpResponse;
 
 @Repository
 public class AnilistRepository {
-    public JSONObject sendAnilistRequest(String query, String endpoint) throws IOException, InterruptedException {
+    private static String endpoint = new String("https://graphql.anilist.co");
+    public JSONObject sendAnilistRequest(String query) throws IOException, InterruptedException {
         HttpClient httpClient = HttpClient.newHttpClient();
         JSONObject jsonResponse = new JSONObject();
 
