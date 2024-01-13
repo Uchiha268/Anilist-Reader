@@ -16,9 +16,9 @@ import java.net.http.HttpResponse;
 public class AnilistService {
     @Autowired
     AnilistRepository anilistRepository;
-    public String getListByUsername(String username, String type) throws IOException, InterruptedException {
+    public String getListByUsername(String username, String type, String status) throws IOException, InterruptedException {
         String query = "{\n" +
-                "  MediaListCollection(userName: \"" + username + "\", type: ANIME, status: " + type + ") {\n" +
+                "  MediaListCollection(userName: \"" + username + "\", type: " + type + ", status: " + status + ") {\n" +
                 "    lists {\n" +
                 "      name\n" +
                 "      entries {\n" +
