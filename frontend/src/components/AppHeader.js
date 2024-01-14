@@ -46,7 +46,7 @@ function AppHeader() {
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: { md: 'flex' },
               fontFamily: 'Arial',
               fontWeight: 700,
               color: 'inherit',

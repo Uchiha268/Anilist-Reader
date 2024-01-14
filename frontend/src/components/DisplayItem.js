@@ -11,19 +11,21 @@ function DisplayItem(props){
         <>
             <Card sx={{padding: "5%", height: '80%', width:"100%", alignItems:"center", justifyContent:"center", display:"flex"}} >
                 <Grid container>
-                    <Grid item xs={12} sm={6} md={5}>
+                    <Grid item xs={12} sm={6} md={5} >
                         <CardMedia
-                            sx={{height: "100%"}}
+                            component={"img"}
+                            sx={{maxHeight: "100%"}}
                             image={coverImageURL}
                             title={title + "_img"}
                         />
                     </Grid>
+
                     <Grid item xs={12} sm={6} md={7} >
                     <CardContent>
                         <Typography gutterBottom variant="h5">
                             {title}
                         </Typography>
-                        <Typography variant="h6">
+                        <Typography variant="h6" sx={{alignSelf:"flex-end"}}>
                             Score - {score}
                         </Typography>
                     </CardContent>
