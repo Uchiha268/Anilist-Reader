@@ -25,6 +25,7 @@ public class AnilistService {
                 "        media {\n" +
                 "          title {\n" +
                 "            english\n" +
+                "            native\n" +
                 "          }\n" +
                 "          coverImage{\n" +
                 "            large\n" +
