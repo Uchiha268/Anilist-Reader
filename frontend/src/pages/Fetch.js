@@ -1,6 +1,8 @@
 import api from "../api/axiosConfig";
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import AppHeader from "../components/AppHeader";
+import Display from "../components/Display";
 function Fetch() {
     const [list, setList] = useState();
     const location = useLocation();
@@ -16,7 +18,6 @@ function Fetch() {
     const getList = async() => {
         try{
             const response = await api.get("" + username + "/" + type + "/" + watchStatus);
-            // const response = await api.get("Uchiha268/ANIME/COMPLETED");
             console.log("Response from server", response);
             setList(response.data);
         }
@@ -30,9 +31,8 @@ function Fetch() {
     }, [])
     return(
         <>
-            <div>
-                <h1>This is the fetch page!</h1>
-            </div>
+            <AppHeader/>
+            <Display/>
         </>
     )
 }
