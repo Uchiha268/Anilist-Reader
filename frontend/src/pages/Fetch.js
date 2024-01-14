@@ -22,6 +22,7 @@ function Fetch() {
             setList(response.data);
         }
         catch(error){
+            console.log("Error happened bro");
             console.log(error);
         }  
     }
