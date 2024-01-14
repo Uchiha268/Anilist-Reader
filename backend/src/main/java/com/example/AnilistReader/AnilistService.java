@@ -19,6 +19,11 @@ public class AnilistService {
     public String getListByUsername(String username, String type, String status) throws IOException, InterruptedException {
         String query = "{\n" +
                 "  MediaListCollection(userName: \"" + username + "\", type: " + type + ", status: " + status + ") {\n" +
+                "    user{\n" +
+                "      avatar{\n" +
+                "        large\n" +
+                "           }\n" +
+                "       }\n" +
                 "    lists {\n" +
                 "      name\n" +
                 "      entries {\n" +
