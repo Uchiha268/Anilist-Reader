@@ -5,11 +5,11 @@ function DisplayItem(props){
     const entry = props.entry;
     const score = entry["score"];
     const coverImageURL = entry["media"]["coverImage"]["large"];
-    const title = entry["media"]["title"]["english"];
+    const title = entry["media"]["title"]["english"] ? entry["media"]["title"]["english"] : entry["media"]["title"]["native"];
 
     return(
         <>
-            <Card sx={{padding: "5%"}}>
+            <Card sx={{padding: "5%", height: '80%', width:"100%", alignItems:"center", justifyContent:"center", display:"flex"}} >
                 <Grid container>
                     <Grid item xs={12} sm={6} md={5}>
                         <CardMedia
@@ -18,9 +18,9 @@ function DisplayItem(props){
                             title={title + "_img"}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={7}>
+                    <Grid item xs={12} sm={6} md={7} >
                     <CardContent>
-                        <Typography gutterBottom variant="h4">
+                        <Typography gutterBottom variant="h5">
                             {title}
                         </Typography>
                         <Typography variant="h6">

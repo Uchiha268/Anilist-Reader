@@ -18,7 +18,7 @@ function Fetch() {
     const getList = async() => {
         try{
             const response = await api.get("" + username + "/" + type + "/" + watchStatus);
-            console.log("Response from server", response);
+            console.log("Response from server", response.data.data);
             setList(response.data);
         }
         catch(error){
@@ -32,7 +32,8 @@ function Fetch() {
     return(
         <>
             <AppHeader/>
-            <Display/>
+            {list && <Display list={list} username={username}/>}
+            
         </>
     )
 }
