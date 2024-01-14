@@ -27,9 +27,10 @@ public class AnilistService {
                 "            english\n" +
                 "          }\n" +
                 "          coverImage{\n" +
-                "            extraLarge\n" +
+                "            large\n" +
                 "          }\n" +
                 "        }\n" +
+                "        score" +
                 "      }\n" +
                 "    }\n" +
                 "  }\n" +
