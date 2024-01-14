@@ -12,28 +12,19 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { ArrowBack } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 function AppHeader() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  const navigate = useNavigate();
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  const handleBackClick = (event) => {
+    navigate(-1);
+  }
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   return (
     <AppBar position="static">
@@ -51,14 +42,12 @@ function AppHeader() {
               fontWeight: 700,
               color: 'inherit',
               textDecoration: 'none',
+              flexGrow: 1
             }}
           >
             AnilistFetcher
           </Typography>
-
-
-          
-
+          <ArrowBack sx={{flexGrow: 0}} onClick={handleBackClick}/>
         </Toolbar>
       </Container>
     </AppBar>

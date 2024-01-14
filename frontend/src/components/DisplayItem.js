@@ -9,7 +9,7 @@ function DisplayItem(props){
 
     return(
         <>
-            <Card sx={{padding: "5%", height: '80%', width:"100%", alignItems:"center", justifyContent:"center", display:"flex"}} >
+            <Card sx={{padding: "5%", height: '80%', width:"100%", alignItems:"center", justifyContent:"center", display:"flex", boxShadow:4}}>
                 <Grid container>
                     <Grid item xs={12} sm={6} md={5} >
                         <CardMedia
